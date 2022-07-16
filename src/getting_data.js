@@ -40,19 +40,19 @@ export let gettingData = function(){
             wind.innerHTML = 'wind: ' + requiredData.wind + 'km/h'
             let icon = document.querySelector('.icon')
             if(requiredData.weather === 'Clouds'){
-                icon.src = '../src/imgs/clouds.svg'
+                icon.src = '/home/raghroog/repos/weather_app/src/imgs/clouds.svg'
             }else if(requiredData.weather === 'Clear'){
-                icon.src = '../src/imgs/clear.svg'
+                icon.src = '/home/raghroog/repos/weather_app/src/imgs/clear.svg'
             }else if(requiredData.weather === 'Drizzle'){
-                icon.src = '../src/imgs/drizzle.svg'
+                icon.src = '/home/raghroog/repos/weather_app/src/imgs/drizzle.svg'
             }else if(requiredData.weather === 'Thunderstorm'){
-                icon.src = '../src/imgs/thunderstorm.svg'
+                icon.src = '/home/raghroog/repos/weather_app/src/imgs/thunderstorm.svg'
             }else if(requiredData.weather === 'Rain'){
-                icon.src = '../src/imgs/rain.svg'
+                icon.src = '/home/raghroog/repos/weather_app/src/imgs/rain.svg'
             }else if(requiredData.weather === 'Snow'){
-                icon.src = '../src/imgs/snow.svg'
+                icon.src = '/home/raghroog/repos/weather_app/src/imgs/snow.svg'
             }else{
-                icon.src = '../src/imgs/fog.svg'
+                icon.src = '/home/raghroog/repos/weather_app/src/imgs/fog.svg'
             }
         })   
         .then(locationInput.value = '') 
