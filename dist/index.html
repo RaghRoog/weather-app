@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="main">
+        <div class="location-container">
+            <div class="location-displayer"></div>
+            <div class="country-displayer"></div>
+        </div>
+        <div class="main-displayer">
+            <div class="temp-container">
+                <div class="current-temp"></div>
+                <div class="min-temp"></div>
+                <div class="max-temp"></div>
+            </div>
+            <div class="weather-container">
+                <div class="weather-icon">
+                    <img class="icon">
+                </div>
+                <div class="weather-description"></div>
+            </div>
+            <div class="additional-info-container">
+                <div class="pressure"></div>
+                <div class="humidity"></div>
+                <div class="wind"></div>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="text" name="location" id="location-input" placeholder="Write a location">
+            <button class="take-input">
+                <img class="magnify" src="../src/imgs/magnify.svg" alt="magnify">
+            </button>
+        </div>
+    </div>
+</body>
+</html>
