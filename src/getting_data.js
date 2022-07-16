@@ -2,7 +2,7 @@ let locationInput = document.getElementById('location-input')
 let takeInputButton = document.querySelector('.take-input')
 export let gettingData = function(){
     takeInputButton.addEventListener('click', () => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locationInput.value}&APPID=6a8d637ce337cd8502a64bec7d68c377&units=metric`, {mode: 'cors'})
+        fetch(`api.openweathermap.org/data/2.5/weather?q=${locationInput.value}&APPID=6a8d637ce337cd8502a64bec7d68c377&units=metric`, {mode: 'cors'})
         .then(function(response){
             return response.json()
         })
