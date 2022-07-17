@@ -1,4 +1,8 @@
 import './main.css'
 import { gettingData } from './getting_data.js'
-import '/home/raghroog/repos/weather_app/src/imgs/magnify.svg'
+import magnify from './imgs/magnify.svg'
+let magnifyIcon = new Image();
+magnifyIcon.src = magnify
+let magnifyButton = document.querySelector('.take-input')
+magnifyButton.appendChild(magnifyIcon)
 gettingData()
