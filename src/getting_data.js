@@ -1,10 +1,4 @@
-import cloudsIcon from './imgs/clouds.svg'
-import clearIcon from './imgs/clear.svg'
-import drizzleIcon from './imgs/drizzle.svg'
-import fogIcon from './imgs/fog.svg'
-import rainIcon from './imgs/rain.svg'
-import snowIcon from './imgs/snow.svg'
-import thunderstormIcon from './imgs/thunderstorm.svg'
+import displayData from './displayData.js'
 let locationInput = document.getElementById('location-input')
 let takeInputButton = document.querySelector('.take-input')
 export let gettingData = function(){
@@ -26,41 +20,7 @@ export let gettingData = function(){
                 humidity: response.main.humidity,
                 pressure: response.main.pressure
             }
-            console.log(requiredData)
-            let locationDisplayer = document.querySelector('.location-displayer')
-            locationDisplayer.innerHTML = requiredData.location
-            let countryDisplayer = document.querySelector('.country-displayer')
-            countryDisplayer.innerHTML = requiredData.country
-            let currentTemp = document.querySelector('.current-temp')
-            currentTemp.innerHTML = requiredData.temp.toFixed(1) + '°C'
-            let minTemp = document.querySelector('.min-temp')
-            minTemp.innerHTML = 'min: ' + requiredData.temp_min.toFixed(1) + '°C'
-            let maxTemp = document.querySelector('.max-temp')
-            maxTemp.innerHTML = 'max: ' + requiredData.temp_max.toFixed(1) + '°C'
-            let weatherDescription = document.querySelector('.weather-description')
-            weatherDescription.innerHTML = requiredData.weather_description
-            let pressure = document.querySelector('.pressure')
-            pressure.innerHTML = 'pressure: ' + requiredData.pressure + 'hPa'
-            let humidity = document.querySelector('.humidity')
-            humidity.innerHTML = 'humidity: ' + requiredData.humidity + '%'
-            let wind = document.querySelector('.wind')
-            wind.innerHTML = 'wind: ' + requiredData.wind + 'km/h'
-            let icon = document.querySelector('.icon')
-            if(requiredData.weather === 'Clouds'){
-                icon.src = cloudsIcon
-            }else if(requiredData.weather === 'Clear'){
-                icon.src = clearIcon
-            }else if(requiredData.weather === 'Drizzle'){
-                icon.src = drizzleIcon
-            }else if(requiredData.weather === 'Thunderstorm'){
-                icon.src = thunderstormIcon
-            }else if(requiredData.weather === 'Rain'){
-                icon.src = rainIcon
-            }else if(requiredData.weather === 'Snow'){
-                icon.src = snowIcon
-            }else{
-                icon.src = fogIcon
-            }
+            displayData(requiredData)
         })   
         .then(locationInput.value = '') 
         .catch(()=> {
