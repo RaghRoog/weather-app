@@ -6,12 +6,13 @@ import rainIcon from './imgs/rain.svg'
 import snowIcon from './imgs/snow.svg'
 import thunderstormIcon from './imgs/thunderstorm.svg'
 export default function displayData(data){
+    console.log(data)
     let locationDisplayer = document.querySelector('.location-displayer')
     locationDisplayer.innerHTML = data.location
     let countryDisplayer = document.querySelector('.country-displayer')
     countryDisplayer.innerHTML = data.country
     let currentTemp = document.querySelector('.current-temp')
-    currentTemp.innerHTML = data.temp.toFixed(1) + '°C'
+    currentTemp.innerHTML = 'Temperature: ' + data.temp.toFixed(1) + '°C'
     let minTemp = document.querySelector('.min-temp')
     minTemp.innerHTML = 'min: ' + data.temp_min.toFixed(1) + '°C'
     let maxTemp = document.querySelector('.max-temp')
